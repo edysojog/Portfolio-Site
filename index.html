@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands."
+    />
+    <meta
+      name="keywords"
+      content="edy, Dumitrache Eduard, portfolio, HTML, CSS, Dumitrache_Eduard, terminal terminal-portfolio"
+    />
+    <meta name="author" content="Dumitrache Eduard" />
+
+    <title>Terminal Portfolio</title>
+
+    <!-- Preconnect and Preload -->
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
+    <link
+      rel="preload"
+      href="assets/fonts/fantasquesansmonoregular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+
+    <!-- Stylesheet -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/39565093f3.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <style>
+      section h1 {
+        font-size: 2rem;
+      }
+    </style>
+
+    <script>
+      function close_window() {
+        if (confirm("Close Window?")) {
+          window.location.href = "about:blank";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="terminal-window" role="main">
+      <header role="banner" aria-label="Site Header">
+        <a
+          href="https://github.com/edysojog/"
+          target="_blank"
+          aria-label="GitHub Profile"
+        >
+          <i
+            class="fa-brands fa-github header-icon github-icon"
+            aria-hidden="true"
+          ></i>
+        </a>
+
+        <div class="centered" aria-hidden="true">
+          <span>edy@terminal</span>
+        </div>
+
+        <a
+          href="#"
+          onclick="close_window(); return false;"
+          aria-label="Close Window"
+        >
+          <i
+            class="fa-solid fa-circle-xmark header-icon close-icon"
+            aria-hidden="true"
+          ></i>
+        </a>
+      </header>
+
+      <hr aria-hidden="true" />
+
+      <div id="contentscroll">
+        <div class="content-container">
+          <div class="ascii-Hero" role="presentation" aria-hidden="true">
+            <pre class="ascii">
+ / * * * * * * * * * * * * * * * \
+ *               .___            *
+ *      ____   __| _/__.__.      *
+ *    _/ __ \ / __ <   |  |      *
+ *    \  ___// /_/ |\___  |      *
+ *     \___  >____ |/ ____|      *
+ *         \/     \/\/           *
+ *                               *
+ \ * * * * * * * * * * * * * * * /
+            </pre>
+          </div>
+
+          <section class="profile-info" aria-labelledby="profile-heading">
+            <h1 id="profile-heading" class="sr-only">Profile Information</h1>
+
+            <div class="info-item">
+              <div class="name">
+                <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+                <span>Dumitrache Eduard</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+              <span>Resume</span>
+              <span class="link-text">→ &nbsp;Coming soon...</span>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+              <a
+                href="https://github.com/edysojog"
+                class="link-text"
+                target="_blank"
+                aria-label="GitHub edysojog"
+                >→ &nbsp;github/edysojog</a
+              >
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+              <a
+                href="https://www.instagram.com/edyyzy"
+                class="link-text"
+                target="_blank"
+                aria-label="Instagram edyyzy"
+                >→ &nbsp;instagram/edyyzy</a
+              >
+            </div>
+          </section>
+        </div>
+
+        <section id="terminal" aria-label="Terminal Emulator">
+          <a id="before"></a>
+
+          <div
+            id="command"
+            onclick="document.getElementById('texter').focus();"
+          >
+            <label for="texter" class="sr-only">Command Input</label>
+            <input
+              type="text"
+              id="texter"
+              class="texter"
+              aria-label="Command line input"
+              onkeyup="typeIt(this, event)"
+              onkeydown="typeIt(this, event); moveIt(this.value.length, event)"
+              onkeypress="typeIt(this, event);"
+            />
+            <div id="liner">
+              <span id="typer" aria-live="polite"></span
+              ><b class="cursor" id="cursor" aria-hidden="true">█</b
+              ><span id="ghost-text" aria-hidden="true"></span>
+              <div class="list" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="bottom-bar" role="contentinfo">
+        <div class="license-info"></div>
+      </footer>
+      <!-- Lazy Loaded Bocchi Cursor -->
+      <img
+        src="assets/bocchi.gif"
+        id="bocchi"
+        alt="cursor-follower"
+        loading="lazy"
+      />
+
+      <!-- JS Files at end for non-blocking load -->
+      <script src="js/caret.js" defer></script>
+      <script src="js/cursor.js" defer></script>
+      <script src="js/commands.js" defer></script>
+      <script src="js/main.js" defer></script>
+    </div>
+  </body>
+</html>
