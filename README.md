@@ -6,6 +6,7 @@ A personal portfolio site styled as an interactive Linux terminal. Visit it live
 
 ## Preview
 
+<img width="1810" height="941" alt="Image" src="https://github.com/user-attachments/assets/9f7d2290-314d-4f6f-944d-60cb5e894580" />
 
 ---
 
