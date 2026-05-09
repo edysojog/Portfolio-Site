@@ -1,6 +1,6 @@
 # Interactive Terminal Portfolio 
 
-A personal portfolio site styled as an interactive Linux terminal. Visit it live at **[edysojog.github.io/Portfolio-Site](https://edysojog.github.io/Portfolio-Site)**.
+A personal portfolio site styled as an interactive Linux terminal. Visit it live at **[edysojog.github.io/Portfolio-Site](https://edysojog.github.io/Portfolio-Site/)**
 
 ---
 
