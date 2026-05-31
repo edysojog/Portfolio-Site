@@ -152,6 +152,7 @@ hr {
 .info-item {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   color: var(--color-primary);
   margin-bottom: 0.5rem; /* optional spacing between items */
 }
@@ -164,6 +165,9 @@ hr {
 
 .link-text {
   padding-left: 0.5rem; /* nice left indent */
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
   color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s ease;
